@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
+*{
+	margin:0px;
+	box-sizing: border-box;
+
+}
+html,body{
+	height: 100%;
+	width: 100%;
+}
+body{
+	position: relative;
+	height: 100%;
+	font-family: Cambria, Georgia, serif;
+	background: #f9f9f9 ;
+	font-weight: 300;
+	font-size: 15px;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+section{
+	padding: 5% 10%;
+}
+div{
+	display: block;
+}
+.container{
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	display: block;
+	text-align:center;
+	background-image: url('../images/backg.png');
+	background-attachment: fixed;
+	background-size: contain;
+	color: #fff;
+	padding: 8% 2% 8%
+}
+  .heading{
+  	padding: 2em;
+  	margin-bottom: 20px;
+  	text-transform: uppercase;
+  	font-family: Montserrat;
+  }
+  .nimbus,.date{
+  	margin-top: 15px;
+  }
+  .nimbus{
+  	font-size: 2em;
+  	font-weight: 700;
+  	animation-iteration-count: infinite;
+  	-webkit-animation-iteration-count: infinite;
+  }
+.formTitle{
+	font-size: 1.5em;
+	color: #fff;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.formContent{
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+	  vertical-align: middle;
+	  font-family: Lato;
+	  background: #fff;
+	  border-radius: 10px;
+	  padding-top: 30px;
+	  padding-bottom: 30px;
+
+}
+@media(max-width: 1024px){
+	.formContent{
+		width: 60%;
+	}
+}
+@media(max-width: 768px){
+	.formContent{
+		width: 90%;
+	}
+}
+.textfieldLabel{
+	top: 0;
+	font-family: Lato;
+	color: #fff;
+    position: absolute;
+    font-size: 20px;
+    margin: 11px 0px;
+   	padding: 0 10px;
+    background-color: #000;
+	-webkit-transition: top .15s ease-in-out, 
+	                      font-size .15s ease-in-out;
+	transition: top .15s ease-in-out, 
+	              font-size .15s ease-in-out;
+}
+.active {
+  top: -25px;
+  font-size: 20px;
+}
+.textfieldInput{
+	width: 70%;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: #000;
+    color: white;
+}
+input[type=text]:focus {
+  outline: none;
+}
+#year_desktop{
+	
+	display: flex;
+	justify-content: space-around;
+}
+.title {
+	text-align: left;
+	font-family: Lato;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: #000;
+	font-weight: 700;
+}
+.divYear{
+		 margin-bottom: 10px;
+	 	width: 70%;
+	 	margin-left: auto;
+	 	margin-right: auto;
+	 	text-align: center;
+}
+input[type = "submit"]{
+	display: inline-block;
+	border: none;
+	width: 50%;
+	padding: 8px 10px;
+	font-family: Montserrat;
+	font-size: 1.2em;
+	background-color: #000;
+	border:1px #fff solid;
+	color:#fff;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+	cursor: pointer;
+	margin-bottom: 15px;
+	border-radius: 30px;
+	font-weight: 700;
+}
+
+input[type = "submit"]:hover {
+	background-color:#333;
+	color: #fff;
+}
+@media(max-width: 768px){
+	.textfieldLabel{
+		font-size: 12px;
+	}
+	.textfieldInput{
+		padding: 9px 12px;
+		width: 80%;
+	}
+	#year_desktop{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}
+.warningName, .warningEmail,.warningNames, .warningCity, .warningPhone, .warningCollege {
+	display: none;
+	color: rgba(255, 0, 0, 0.8);
+	font-family: cat;
+	font-size: 1.0em;
+	float: left;
+	clear: both;
+}
+.warningName.visible,.warningNames.visible, .warningEmail.visible, .warningCity.visible, .warningPhone.visible, .warningCollege.visible {
+	display: inline-block;
+}
+.warningYear, .warningEvent, .warningGender {
+	display: none;
+	text-decoration: none;
+	font-family: cat;
+	font-size: 1.0em;
+	color: rgba(255, 0, 0, 0.8);
+	clear: both;
+}
+.warningYear.visible, .warningEvent.visible, .warningGender.visible {
+	display: inline-block;
+}
+.BlockUIConfirm {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 50;
+    display: none;
+}
+
+.blockui-mask {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	opacity: 0.4;
+}
+
+.RowDialogBody {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 400px;
+	opacity: 1;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.RowDialogBody > div:not(.confirm-body) {
+	padding: 8px 10px;
+}
+
+.confirm-header {
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	font-size: 13pt;
+	font-weight: bold;
+	margin: 0;
+}
+
+.row-dialog-hdr-success {
+	border-top: 4px solid #5cb85c;
+	border-bottom: 1px solid transparent;
+}
+
+.row-dialog-hdr-info {
+	border-top: 4px solid #5bc0de;
+	border-bottom: 1px solid transparent;
+}
+
+.confirm-body {
+	border-top: 1px solid #ccc;
+	padding:20px 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.confirm-btn-panel {
+	width: 100%;
+}
+.row-dialog-btn {
+	cursor: pointer;
+}
+
+.btn-naked {
+	background-color: transparent;
+}
+

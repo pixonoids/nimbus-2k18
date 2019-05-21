@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NIMBUS'18|Bills</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bill.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Nimbus 2K18 : SYNERGIA - ACTUALIZING THE HUMAN IMAGINATION . The annual technical fest of National Institute of Technology Hamirpur">
+  <meta name="description" content="This Nimbus, NIT Hamirpur web application supports both offline and online mode, has a splash screen and add to home screen, just like any normal native app">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="theme-color" content="#333">
+    <meta name="msapplication-TileColor" content="#714463">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileImage" content="/images/nimbus2.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NIMBUS18 progressive app">
+  <meta name="application-name" content="NIMBUS18 progressive app">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="icon" href="./images/nimbuslogo.png">
+</head>
+<body>
+	<div class="nav-div">
+			<a href="/" class="titleLogo"><img src="images/nimbuslogo.png"></a>
+			<a href="#" class="toggle-menu"><i class="fa fa-bars" id="menuBars"></i></a>
+		</div>
+		<div class="nav-div navList">
+			<ul class="navbar-nav">
+				<li class="menuItem menuTitle">NIMBUS 2k'18</li>
+				<li class="menuItem"><a href="/about">About</a></li>
+				<li class="menuItem"><a href="/events">Events</a></li>
+				<li class="menuItem menuLogo"><a href="/"><img class="animated " id="sitetitle" src="images/nimbuslogo.png"></a></li>
+				<li class="menuItem"><a href="/contact">Contact Us</a></li>
+				<li class="menuItem"><a href="/sponsors">Sponsors</a></li>
+				<li class="menuItem regimenu"><a href="/register">Register</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<ul class="img-grid" id="bills_container">
+			</ul>
+			<div id="myModal" class="modal">
+			  <span class="close">&times;</span>
+			  <img class="modal-content" id="img01">
+			</div>
+			<footer>
+					<ul class="billbtn">
+					<li><a href="/billadd"><i class="fa fa-upload"></i></a></li>
+					<li style="width: 40px"><a href="/billshow"><i class="fa fa-image"></i></a></li>
+				</ul>
+			<ul class="social">
+				<li><a href="facebook.com"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="facebook.com"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="facebook.com"><i class="fa fa-youtube"></i></a></li>
+			</ul>
+			<div class="credits">
+				<p>Designed By: Nitesh Thakur(2nd Year)<img id="pixoLogo" src="images/Pixonoids.png">|Nimbus</p>
+			</div>
+
+		</footer>
+		</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/imageviewer.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+	 $(document).ready(function () {
+	 	 console.log('hello div')
+	 	 
+         $.ajax({
+            type: "GET",
+            url: "/billdata",
+            success: function (data) {
+                console.log("SUCCESS : ", data);
+                for(i =0;i<data.length;i++){
+                var newdiv='<li class="pic"><img class="myImg" src="uploads/'+data[i].billpic+'"><p>'+data[i].addr+'</p><p>'+data[i].team+'</p></li>';
+                $('#bills_container').append(newdiv);
+                }
+                var modal = document.getElementById('myModal');
+                var active;
+                var img = document.getElementsByClassName("myImg");
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                var pic=document.getElementsByClassName("pic");
+                for(var i=0;i<pic.length;i++){
+	                console.log('hello divyansh');
+	                pic[i].Id=i;
+                   	pic[i].onclick= function(){
+		                modal.style.display="block";
+		               modalImg.src=img[this.Id].src;
+	                }
+                }
+                var span = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                     modal.style.display = "none";
+                }
+            },
+            error: function (e) {
+                console.log("ERROR : ", e);
+            }
+       });
+    });
+</script>

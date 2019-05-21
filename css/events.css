@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
+*{
+	margin:0px;
+	box-sizing: border-box;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	height: 100%;
+	height: 100%;
+	font-family: Cambria, Georgia, serif;
+	background: #f9f9f9 ;
+	font-weight: 300;
+	font-size: 15px;
+	color: #333;
+
+	-webkit-font-smoothing: antialiased;
+	overflow-y: scroll;
+}
+.register{
+	margin: 1em;
+	color: #2a2a2a;
+    padding: 1.5em 3em;
+    border-radius: 50px;
+    background: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    min-width: 150px;
+    max-width: 250px;
+    cursor: pointer;
+    border:none;
+    -moz-animation:infinite;
+    -ms-animation:infinite ;
+    -o-animation:infinite ;
+    -webkit-animation:infinite ;
+	animation:infinite ;
+	position: absolute;
+	top: 8em;
+	right: 2em;
+}
+.register:hover {
+	    -webkit-transition: background-color  0.3s, color 0.3s;
+    -moz-transition: background-color  0.3s, color  0.3s;
+    -o-transition: background-color  0.3s, color 0.3s;
+    -ms-transition: background-color 0.3s, color  0.3s;
+    transition: background-color 0.3s, color 0.3s;
+	border:2px solid #fff;
+	background-color: #2a2a2a;
+	color: #fff;
+    -webkit-animation: none;
+	animation: none; 
+  }
+  @media(max-width: 768px){
+  	.register{
+  		display: none;
+  	}
+  }
+  .container{
+  	height: 100%;
+  	text-align: center;
+  	width: 100%;
+	position: absolute;
+	top: 0px;
+	background: url('../images/backg.png');	
+	background-size: contain;
+	background-size: 100% 100%;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+  }
+
+  .clubs{
+  	width: 20%;
+	padding-top: 7em;
+	font-family: Montserrat;
+	background-color: #2a2a2a;
+	text-transform: uppercase;
+	display: inline-block;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.clubList{
+	list-style: none;
+	padding: 0;
+	color: #fff;
+	font-size: 15px;
+}
+.clubName{
+	padding:20px;
+	cursor: pointer;
+}
+.eventName:hover{
+	color: #2a2a2a;
+	background-color: #fff;
+}
+.events{
+	color: #fff;
+	padding: 8em 2em 0em;
+	font-family: Montserrat;
+	/*float: left;*/
+	text-align: center;
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.event-block{
+	background-color: #2a2a2a;
+	margin-top: 3em; 
+	width: 95%;
+	height: 65%;
+	border: 2px solid #fff;
+	display: none;
+	position: absolute;
+	overflow-y: scroll;
+}
+
+.eventList{
+	list-style: none;
+	padding: 0px;
+	display: flex;
+	-webkit-display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+}
+.eventName{
+	background: rgba(0,0,0,0.4);
+	font-size: 10px;
+	height:70px;
+	text-align:center;
+	line-height: 70px;
+	width:100%;
+	cursor: pointer;
+	border-right: 1px solid #fff;
+}
+.active{
+	display: block;
+}
+
+.selected{
+	animation: select 1s ease forwards;
+}
+.notselected{
+	color: #2a2a2a;
+	background-color: #fff;
+}
+@keyframes select{
+	0%{
+		color: #fff;
+		background-color: #2a2a2a;
+	}
+	100%{
+		color: #2a2a2a;
+		background-color: #fff;
+	}
+}
+.eventDescription{
+	height: 350px;
+	padding: 3em 1em;
+	text-align: left;
+	font-family: Lato;
+	display: block;
+}
+.description{
+	left: 15%;
+	width: 70%;
+	padding: 30px 30px;
+	border: 1px solid #fff;
+	position: absolute;
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+}
+
+@media(max-width: 768px){
+	.event-block{
+		overflow-y: none;
+	}
+	.event-block{
+	background-color: #2a2a2a;
+	margin-top: 3em; 
+	width: 95%;
+	height: 85%;
+	border: 2px solid #fff;
+	position: absolute;
+	overflow-y: scroll;
+   }
+	.description{
+		left: auto;
+		width: auto;
+		padding: 0px;
+		border: none;
+		font-size: 15px;
+
+		
+	}
+    .eventDescription .description p{
+      overflow-y: scroll;
+      padding-bottom: 20px;
+    }
+}
+.clubDropdown,.eventDropdown{
+	display: none;
+}
+@media(max-width: 768px){
+	.clubs{ 
+		position: relative;
+		display: block;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		border: 2px solid #fff;
+		height: auto;
+		margin-top: 5em;
+		padding-top: 0;
+	}
+	.clubList{
+		display: none;
+	    overflow: auto;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+
+	.clubDropdown{
+	    background-color: #3498DB;
+	    color: white;
+	    padding: 13px 20px;
+	    font-size: 16px;
+	    border: none;
+	    cursor: pointer;
+	    display: block;
+	    width: 100%;
+	    position: relative;
+	    text-align: left;
+	    font-family: Montserrat;
+}
+	.clubName{
+		padding:10px 20px;
+	}
+	.events{
+		display: block;
+		width: 100%;
+		padding: 2em 0.7em 0em;
+	}
+	.events h1{
+		display: none;
+	}
+	.event-block{
+		margin: 0px;
+		position: relative;
+		width: 100%;
+		height:450px;
+	}
+	.eventList{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 5px;
+		justify-content:space-between; 
+	}
+	.eventName{
+		width: 33%;
+		height: 40px;
+		font-size: 10px;
+		line-height: 50px;
+		vertical-align: middle;
+		border-right: none;
+	}
+	@media(max-width: 768px){
+		.eventName{
+			width: 33%;
+			height: 30px;
+			line-height: 30px;
+			vertical-align: middle;
+		}
+		.eventDescription{
+		max-height: 350px;
+		padding: 3em 1em;
+		text-align: left;
+		font-family: Lato;
+		display: block;
+}
+	}
+	.show{display: block;}
+	.hide{display: none;}
+	.eventDropdown{
+	    background-color: #3498DB;
+	    color: white;
+	    padding: 13px 20px;
+	    font-size: 16px;
+	    border: none;
+	    cursor: pointer;
+	    display: block;
+	    width: 100%;
+	    position: relative;
+	    text-align: left;
+	    font-family: Montserrat;
+	}
+	.eventDescription{
+		padding: 1em 1em;
+	}
+
+}
+@media(max-height: 500px){
+	.container{
+		overflow-y: scroll;
+	}
+}

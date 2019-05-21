@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NIMBUS'18|Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Nimbus 2K18 : SYNERGIA - ACTUALIZING THE HUMAN IMAGINATION . The annual technical fest of National Institute of Technology Hamirpur">
+  <meta name="description" content="This Nimbus, NIT Hamirpur web application supports both offline and online mode, has a splash screen and add to home screen, just like any normal native app">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="theme-color" content="#333">
+    <meta name="msapplication-TileColor" content="#714463">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileImage" content="/images/nimbus2.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NIMBUS18 progressive app">
+  <meta name="application-name" content="NIMBUS18 progressive app">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.blue-purple.min.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="icon" href="./images/nimbuslogo.png">
+	<style type="text/css">
+		.mdl-radio.is-upgraded{
+			padding-left: 0px;
+		}
+	</style>
+
+</head>
+<body onload="showMessage()">
+    <div id="message" class="BlockUIConfirm" style="display:none;">
+	<div class="blockui-mask"></div>
+	<div class="RowDialogBody">
+			<div class="confirm-btn-panel pull-right">
+			<div class="btn-holder pull-right">
+				<button  style="background-color: transparent; border: none;"onclick="$('#message').hide();"><i class="fa fa-times" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div class="confirm-header row-dialog-hdr-success">
+		</div>
+		<div class="confirm-body">
+			 shdcbhsdvchgsdvcghsd
+<!-- 			 <p>Registration fees will be Rs. 250 for each one of these events</p>
+ -->		</div>
+
+	</div>
+   </div>	
+    <div id="BlockUIConfirm" class="BlockUIConfirm">
+	<div class="blockui-mask"></div>
+	<div class="RowDialogBody">
+		<div class="confirm-header row-dialog-hdr-success">
+		</div>
+		<div class="confirm-body">
+			 Registered successfully!!
+<!-- 			 <p>Registration fees will be Rs. 250 for each one of these events</p>
+ -->		</div>
+		<div class="confirm-btn-panel pull-right">
+			<div class="btn-holder pull-right">
+			</div>
+		</div>
+	</div>
+   </div>	
+	<div class="nav-div">
+			<a href="/" class="titleLogo"><img src="images/nimbuslogo.png"></a>
+			<a href="#" class="toggle-menu"><i class="fa fa-bars" id="menuBars"></i></a>
+		</div>
+		<div class="nav-div navList">
+			<ul class="navbar-nav">
+				<li class="menuItem menuTitle">NIMBUS 2k'18</li>
+				<li class="menuItem"><a href="/about">About</a></li>
+				<li class="menuItem"><a href="/events">Events</a></li>
+				<li class="menuItem menuLogo"><a href="/"><img class="animated " id="sitetitle" src="images/nimbuslogo.png"></a></li>
+				<li class="menuItem"><a href="/contact">Contact Us</a></li>
+				<li class="menuItem"><a href="/sponsors">Sponsors</a></li>
+				<li class="menuItem regimenu"><a href="/register">Register</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="heading">
+				<div class="nimbus animated bounce">NIMBUS 2K'18</div>
+				<div class="date">7th - 9th April</div>
+				<div class="formTitle">REGISTRATION</div>
+			</div>
+			<div class="formContent">
+				<form>
+					<div style="position: relative;display:flex;flex-direction:column;align-items:center; margin:20px 0; width:100%">
+						<label class="textfieldLabel" for = "name">Name</label>
+ 					    <input class="textfieldInput"  type = "text" id = "name" name="name"/>
+ 					    <div class="warningName"> Not Valid </div>
+					</div>
+					<div style="position: relative;display:flex;flex-direction:column;align-items:center; margin:20px 0; width:100%">
+						<label class="textfieldLabel" for = "gender">Enter the names of member</label>
+ 					    <input class="textfieldInput"  type = "text" id = "gender" name="gender"/>
+ 					    <div class="warningGender"> Not Valid </div>
+					</div>
+					<div style="position: relative;display:flex;flex-direction:column;align-items:center; margin:30px 0; width:100%">
+						<label class="textfieldLabel" for = "email">Email</label>
+ 					    <input class="textfieldInput"  type = "text" id = "email" name="email"/><div class="warningEmail"> Not Valid </div>
+					</div>
+					<div style="position: relative;display:flex;flex-direction:column;align-items:center; margin:30px 0; width:100%">
+						<label class="textfieldLabel" for = "city">City</label>
+ 					    <input class="textfieldInput"  type = "text" id = "city" name="city"/><div class="warningCity"> Not Valid </div>
+					</div>
+					<div style="position: relative;display:flex;flex-direction:column;align-items:center;margin: 30px 0; width:100%">
+						<label class="textfieldLabel" for = "college">College(Enter NA if not applicable)</label>
+ 					    <input class="textfieldInput"  type = "text" id = "college" name="college"/><div class="warningCollege"> Not Valid </div>
+					</div>
+					<div style="position: relative;display:flex;flex-direction:column;align-items:center; margin:30px 0; width:100%">
+						<label class="textfieldLabel" for = "phone">Phone Number</label>
+ 					    <input class="textfieldInput"  type = "text" id = "phone" name="phone"/> <div class="warningPhone"> Not Valid </div>
+					</div>
+					<div class="divYear" >
+						<div class="title"> <span class="titleText"> Year you study in :</span><span class="warningYear"> &nbsp;&nbsp;Select a year </span></div>
+						<div id="year_desktop" style="padding-left: 17px;">
+						 <div style="margin-bottom: 10px;">
+							<label style="background-color: white; padding:0px 20xpx ;width:75px;color:black; font-weight: 700;"   class = "mdl-radio mdl-js-radio mdl-js-ripple-effect" for = "first">
+								 <input type = "radio" id = "first" name = "year" value="1"
+										class = "mdl-radio__button">
+								 <span class = "mdl-radio__label">1st</span>
+							</label>
+						</div>
+						<div style="margin-bottom: 10px;">
+						   	<label style="background-color: white; padding:0px 20xpx ;width:75px;color:black; font-weight: 700;"   class = "mdl-radio mdl-js-radio mdl-js-ripple-effect"
+								 for = "second">
+								 <input type = "radio" id = "second" name = "year"
+										class = "mdl-radio__button" value="2" >
+								 <span class = "mdl-radio__label">2nd</span>
+						  	</label>
+					   </div>
+							
+				   <div style="margin-bottom: 10px;">
+				   		 <label style="background-color: white; padding:0px 20xpx ;width:75px;color:black; font-weight: 700;"     class = "mdl-radio mdl-js-radio mdl-js-ripple-effect"
+								for = "third">
+								<input type = "radio" id = "third" name = "year"
+									 class = "mdl-radio__button" value="3" >
+								<span class = "mdl-radio__label">3rd</span>
+							 </label>
+					 </div>
+							
+							<div style="margin-bottom: 10px;">
+								<label style="background-color: white; padding:0px 20xpx ;width:75px;color:black; font-weight: 700;"   class = "mdl-radio mdl-js-radio mdl-js-ripple-effect"
+							 for = "forth">
+							 <input type = "radio" id = "forth" name = "year"
+									class = "mdl-radio__button" value="4" >
+							 <span class = "mdl-radio__label">4th</span>
+							</label>
+	 					 </div>
+						
+						 <div style="margin-bottom: 10px;">
+						 	 <label style="background-color: white; padding:0px 20xpx ;width:75px;color:black; font-weight: 700;"      class = "mdl-radio mdl-js-radio mdl-js-ripple-effect"
+ 						 for = "fifth">
+ 						 <input type = "radio" id = "fifth" name = "year"
+ 								class = "mdl-radio__button" value="5" >
+ 						 <span class = "mdl-radio__label">5th</span>
+ 						</label>
+						 </div>
+						
+						<div style="margin-bottom: 10px;" >
+							<label style="background-color: white; padding:0px 20xpx ;width:75px;color:black;  font-weight: 700;"   class = "mdl-radio mdl-js-radio mdl-js-ripple-effect"
+						 for = "na">
+						 <input type = "radio" id = "na" name = "year"
+								class = "mdl-radio__button" value="0" >
+						 <span class = "mdl-radio__label">NA</span>
+						</label>
+						</div>
+					</div>
+				</div>
+<!-- 				<div class="divYear" style="text-align: left;">
+						<div class="title"> <span class="titleText"> Event you wish to participate in :</span><span class="warningEvent"> &nbsp;&nbsp;Select at least one event </span></div>
+
+						<label style="margin-bottom:15px;display: block;background-color: white; padding:0px 20xpx ;width:75px;color:black; font-weight: 700;"  class = "mdl-checkbox mdl-js-checkbox" for = "bdance">
+                  <input type = "checkbox" id = "bdance"
+                     class = "mdl-checkbox__input" value="battle of dance" name="events">
+                  <span class = "mdl-checkbox__label" >Event</span>
+            </label>
+						<label style="margin-bottom:15px;display: block;background-color: white; padding:0px 20xpx ;width:75px;color:black; font-weight: 700;"  class = "mdl-checkbox mdl-js-checkbox" for = "bbands">
+                  <input type = "checkbox" id = "bbands"
+                     class = "mdl-checkbox__input" value="battle of bands" name="events">
+                  <span class = "mdl-checkbox__label">Event</span>
+            </label>
+						<label style="margin-bottom:15px;display: block;background-color: white; padding:0px 20xpx ;width:75px;color:black;  font-weight: 700;"  class = "mdl-checkbox mdl-js-checkbox" for = "nukkadn">
+                  <input type = "checkbox" id = "nukkadn"
+                     class = "mdl-checkbox__input" value="battle of drama" name="events">
+                  <span class = "mdl-checkbox__label">Event</span>
+            </label>
+						<label style="margin-bottom:15px;display: block;background-color: white; padding:0px 20xpx ;width:75px;color:black; font-weight: 700;"  class = "mdl-checkbox mdl-js-checkbox" for = "fash">
+                  <input type = "checkbox" id = "fash"
+                     class = "mdl-checkbox__input" value="battle of fash" name="events">
+                  <span class = "mdl-checkbox__label">Event</span>
+            </label>
+					</div> -->
+				<input type="submit" value="Register" class="reg">
+				</form>
+			</div>
+
+		</div>
+
+		<footer>
+				<ul class="billbtn">
+					<li><a href="/billadd"><i class="fa fa-upload"></i></a></li>
+					<li style="width: 40px"><a href="/billshow"><i class="fa fa-image"></i></a></li>
+				</ul>
+			<ul class="social">
+				<li><a href="https://www.facebook.com/festnimbus/"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://www.instagram.com/pixonoids/"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="https://www.youtube.com/pixonoids"><i class="fa fa-youtube"></i></a></li>
+			</ul>
+			<div class="credits">
+				<p>Designed By: Nitesh Thakur(2nd Year)<img style="margin-bottom: 0px;" id="pixoLogo" src="images/Pixonoids.png">|Nimbus</p>
+			</div>
+			
+		</footer>
+		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('.textfieldInput').on('focusin', function() {
+		  $(this).parent().find('.textfieldLabel').addClass('active');
+		});
+
+		$('.textfieldInput').on('focusout', function() {
+		  if (!this.value) {
+		    $(this).parent().find('.textfieldLabel').removeClass('active');
+		  }
+		});
+	</script>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/registervalid.js"></script>
+</body>
+</html>

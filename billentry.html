@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NIMBUS 2K'18| Enter Bill</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Nimbus 2K18 : SYNERGIA - ACTUALIZING THE HUMAN IMAGINATION . The annual technical fest of National Institute of Technology Hamirpur">
+  <meta name="description" content="This Nimbus, NIT Hamirpur web application supports both offline and online mode, has a splash screen and add to home screen, just like any normal native app">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="theme-color" content="#333">
+    <meta name="msapplication-TileColor" content="#714463">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileImage" content="/images/nimbus2.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NIMBUS18 progressive app">
+  <meta name="application-name" content="NIMBUS18 progressive app">
+	<link rel="stylesheet" type="text/css" href="css/billentry.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="icon" href="./images/nimbuslogo.png">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.grey-deep_purple.min.css">
+</head>
+<body>
+    <div id="BlockUIConfirm" class="BlockUIConfirm">
+	<div class="blockui-mask"></div>
+	<div class="RowDialogBody">
+		<div class="confirm-header row-dialog-hdr-success">
+		</div>
+		<div class="confirm-body">
+			Bill is uploaded successfully!!
+		</div>
+		<div class="confirm-btn-panel pull-right">
+			<div class="btn-holder pull-right">
+				<button  style="background-color: transparent; border: none;"onclick="$('#BlockUIConfirm').hide();"><i class="fa fa-times" aria-hidden="true"></i></button>
+				</div>
+		</div>
+	</div>
+   </div>	
+	<div class="nav-div">
+			<a href="/" class="titleLogo"><img src="images/nimbuslogo.png"></a>
+			<a href="#" class="toggle-menu"><i class="fa fa-bars" id="menuBars"></i></a>
+		</div>
+		<div class="nav-div navList">
+			<ul class="navbar-nav">
+				<li class="menuItem menuTitle">NIMBUS 2k'18</li>
+				<li class="menuItem"><a href="/about">About</a></li>
+				<li class="menuItem"><a href="/events">Events</a></li>
+				<li class="menuItem menuLogo"><a href="/"><img class="animated " id="sitetitle" src="images/nimbuslogo.png"></a></li>
+				<li class="menuItem"><a href="/contact">Contact Us</a></li>
+				<li class="menuItem"><a href="/sponsors">Sponsors</a></li>
+				<li class="menuItem regimenu"><a href="/register">Register</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="heading">
+				<div class="nimbus">NIMBUS 2K'18</div>
+				<div class="date">7th - 9th April</div>
+				<div class="formTitle">Bill Entry</div>
+			</div>
+			<div class="formContent">
+			<form method="POST" action="" id="billForm" enctype="multipart/form-data">
+				<div style="position: relative;display:flex;flex-direction:column;align-items:center;margin:20px 0; width:100%">
+						<label class="textfieldLabel" for = "memo">Memo Number</label>
+ 					    <input class="textfieldInput"  type = "text" id = "memo" name="memo"/><div class="warningName"> Not Valid </div>
+					</div>
+				<div style="position: relative;display:flex;flex-direction:column;align-items:center;margin:20px 0; width:100%">
+						<label class="textfieldLabel" for = "addr">Shop Name and Address</label>
+ 					    <input class="textfieldInput"  type = "text" id = "addr" name="addr"/><div class="warningAddr"> Not Valid </div>
+					</div>
+				<div style="position: relative;display:flex;flex-direction:column;align-items:center;margin:20px 0; width:100%">
+						<label class="textfieldLabel" for = "team">Team</label>
+ 					    <input class="textfieldInput"  type = "text" id = "team" name="team"/><div class="warningTeam"> Not Valid </div>
+					</div>
+				<div style="position: relative;display:flex;flex-direction:column;align-items:center;margin:20px 0width:100%">
+						<label class="textfieldLabel" for = "purpose">Purpose</label>
+ 					    <textarea style="; height: 100px;font-family: inherit; " class="textfieldInput"  type = "text" id = "purpose" name="purpose"></textarea><div class="warningPurpose"> Not Valid </div>
+					</div>
+				<div style="position: relative;display:flex;flex-direction:column;align-items:center;margin:20px 0; width:100%">
+						<label class="textfieldLabel" for = "amt">Amount</label>
+ 					    <input class="textfieldInput"  type = "text" id = "amt" name="amt"/>
+ 					    <div class="warningAmt"> Not Valid </div>
+					</div>
+					<label class="upload">
+						<div><input type="file" class="bill" name="billpic" id="billpic" accept="image/*"></div>
+					</label>
+				<input type="submit" id="submitButton" value="Enter Bill" class="mdl-button mdl-js-button mdl-button--raised">
+			</form>
+
+		</div>
+
+		</div>
+
+	     <footer>
+				<ul class="billbtn">
+					<li><a href="/billadd"><i class="fa fa-upload"></i></a></li>
+					<li style="width: 40px"><a href="/billshow"><i class="fa fa-image"></i></a></li>
+				</ul>	
+			<ul class="social">
+				<li><a href="https://www.facebook.com/festnimbus/"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://www.instagram.com/pixonoids/"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="https://www.youtube.com/pixonoids"><i class="fa fa-youtube"></i></a></li>
+			</ul>
+			<div class="credits">
+				<p>Designed By: Nitesh Thakur(2nd Year)<img style="margin-bottom: 0px;" id="pixoLogo" src="images/Pixonoids.png">|Nimbus</p>
+			</div>
+			
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('.textfieldInput').on('focusin', function() {
+		  $(this).parent().find('.textfieldLabel').addClass('active');
+		});
+
+		$('.textfieldInput').on('focusout', function() {
+		  if (!this.value) {
+		    $(this).parent().find('.textfieldLabel').removeClass('active');
+		  }
+		});
+	</script>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/billValidate.js"></script>
+</body>
+</html>
